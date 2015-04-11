@@ -1,0 +1,192 @@
+/* general
+--------------------------------------------------------
+*/
+html,body{margin:0;padding:0;} /* Common margin & padding for all browsers */
+html{overflow-y:scroll;} /* Always display the scrollbar, avoid flipping pages */
+
+html{background:#E6E6E6;} /* Background color for whole browser window */
+body{background:#fff;} /* Background color for the body-part of the browser window */
+
+body{font-family:Georgia, serif;color:#333;} /* Default font for whole page */
+
+h1{text-transform:uppercase;} /* Transform all letter to uppercase. */
+h1,h2{border-bottom:1px solid #dddddd;} /* Put border below header h1 and h2 */
+
+img {border:0;} /* No border around linked images */
+
+
+/* html5 elements
+--------------------------------------------------------
+*/
+header,footer,nav,article,section,aside,figure,figcaption{display:block;}
+
+
+/* page structure
+--------------------------------------------------------
+
+  Layout and size of header, content and footer
+*/
+/* the header with navigation to related links */
+header#above{font-family:arial,helvetica,sans-serif;border-bottom:1px solid #E6E6E6;margin-bottom:4px;color:#000;}
+
+/* set width and center page */
+header#top,
+section#content,
+footer#bottom{margin:0 auto;width:950px;}
+
+/* add common padding to main content block */
+section#content{padding:1em 0 1em 0;}
+
+/* add padding and background to the footer block */
+div#footer{padding-bottom:20px;background:#E6E6E6;}
+
+section#content{overflow:auto;} /* clearer-fix, see the guide for css20 */
+
+
+/* a links
+--------------------------------------------------------
+*/
+a {  color: inherit; outline:0;}
+a:link    { }
+a:visited { }
+a:hover   { text-decoration:none; color:#5C0A0A; }
+a:active  { }
+
+
+/* navigation menu
+--------------------------------------------------------
+*/
+nav.navmenu {
+  font-family: arial;
+  font-weight: bold;
+  padding: 2px 8px;
+  background:#656565;
+  border:2px solid #858585;
+}
+nav.navmenu a {padding:6px 8px;text-decoration:none;border:2px solid transparent;color:#fff;}
+nav.navmenu a:hover {background:#858585;border:2px solid #656565;}
+
+nav.related {
+  padding: 0.2em 1em 0.3em 1em;
+  font-size:smaller;
+}
+
+
+/* figure & figcaption
+--------------------------------------------------------
+*/
+figure {border:1px solid #E6E6E6;padding:4px;margin:1em;text-align:center;}
+figcaption {font-style:italic;font-size:smaller;padding-left:1em;}
+
+figure.right{margin-right:0;}
+figure.top{margin-top:0;}
+figure.fullwidth{margin-left:0;margin-right:0;}
+
+.me {
+  width:100px;
+  height:150px;
+  float:right;
+}
+
+
+/* page footer
+--------------------------------------------------------
+*/
+footer#bottom {
+  font: italic 0.8em Arial, Helvetica, sans-serif;
+  color: #4D4D4D;
+}
+
+
+/* article byline & signature
+--------------------------------------------------------
+*/
+footer.byline {
+  clear: both;
+  border-top: 1px dashed #999999;
+  margin-top:2em;
+  padding: 1em;
+  color: #555555;
+  font-size: smaller;
+  font-style:italic;
+}
+
+footer.byline img {padding:2px;outline:#999999 groove 1px;
+}
+
+
+/* Misc classes
+--------------------------------------------------------
+*/
+.right {float:right;}
+.left {float:left;}
+.justify,
+.justify-para p {text-align:justify;}
+
+.quiet { color: #666; }
+.loud { color: #000; }
+
+.small { font-size: .8em; margin-bottom: 1.875em; line-height: 1.875em; }
+.large { font-size: 1.2em; line-height: 2.5em; margin-bottom: 1.25em; }
+.hide { display: none; }
+
+/* Use a .box to create a padded box inside a column. */
+.box {
+  padding: 1.5em;
+  margin-bottom: 1.5em;
+  background: #F2F2F2;
+}
+
+/* Border on right hand side of a column. */
+.border {
+  padding-right: 1em;
+  margin-right: 5px;
+  border-right: 1px solid #ddd;
+}
+
+/* Use this to create a horizontal ruler across a column. */
+hr {
+  background: #ddd;
+  color: #ddd;
+  clear: both;
+  float: none;
+  width: 100%;
+  height: 1px;
+  margin: 0 0 1.45em;
+  border: none;
+}
+
+
+/* highlight current choice in navigation menu
+--------------------------------------------------------
+*/
+body#me a#me-,
+body#report a#report-,
+body#guide a#guide-,
+body#source a#source- {background:#858585;border:2px solid #656565;}
+
+
+/* article byline & signature
+--------------------------------------------------------
+*/
+footer.byline {
+        clear: both;
+  border-top: 1px dashed #999999;
+  margin-top:2em;
+  padding: 1em;
+  color: #555555;
+  font-size: smaller;
+  font-style:italic;
+}
+
+footer.byline img {padding:2px;outline:#999999 groove 1px;
+}
+
+
+/* highlight current choice in navigation menu
+--------------------------------------------------------
+*/
+body#me a#me-,
+body#report a#report-,
+body#guide a#guide-,
+body#source a#source- {background:#858585;border:2px solid #656565;}
