@@ -13,7 +13,7 @@ include("incl/header.php"); ?>
 
 <!--- Main -->
 <section id="content">
-	<?php echo $sourceBody;  ?>
+	<?php echo $sourceBody; ?>
 </section>
 
 <?php include("incl/footer.php"); ?>
