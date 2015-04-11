@@ -4,4 +4,4 @@ BTH course
 
 Webpage built using MFact
 
-MFact is a custom modified Framework based on Anax-oophp https://github.com/mosbth/Anax-oophp
+MFact is a custom modified version of Anax-oophp Framework https://github.com/mosbth/Anax-oophp
