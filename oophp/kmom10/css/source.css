@@ -1,0 +1,68 @@
+/**
+ * Style for source.php
+ */
+.src-breadcrumb,
+.src-filelist {
+  font-family: monospace;
+  list-style-type: none;
+  padding: 0;
+  margin: 0 0 22px 10px;
+}
+
+h3 code a,
+.src-breadcrumb li a,
+.src-filelist a{
+  text-decoration:none;
+  color:#BBB;
+}
+
+h3 code a:hover,
+.src-breadcrumb li a:hover,
+.src-filelist a:hover{
+  text-decoration:none;
+  color:#EEE;
+}
+
+.src-breadcrumb li {
+  padding: 0;
+  margin: 0;
+  display: inline;
+}
+
+.src-container {
+  min-width: 40em;
+}
+
+.src-header {
+  color: #DDD;
+  border: solid 1px #555;
+  border-bottom: 0px;
+  background: #333;
+  padding: 0.5em 0.5em 0.5em 0.5em;
+} 
+
+.src-rows {
+  float: left;
+  text-align: right;
+  color: #DDD;
+  border: solid 1px #555;
+  border-right: none;
+  background: #333;
+  padding: 0.5em 0.5em 0.5em 0.5em;
+} 
+
+.src-rows a:link,
+.src-rows a:visited,
+.src-rows a:hover,
+.src-rows a:active  { 
+  text-decoration: none; 
+  color: inherit;
+}
+
+.src-code {
+  white-space: nowrap;
+  border: solid 1px #555;
+  background: #edf5ff;
+  padding: 0.5em 0.5em 0.5em 0.5em;
+  overflow: auto;
+}
