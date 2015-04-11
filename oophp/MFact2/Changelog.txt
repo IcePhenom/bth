@@ -1,0 +1,61 @@
+kmom06
+- Classes Introduced
+	CImage
+	CGallery
+-Info
+	CImage handles and manipulates images.
+	CGallery uses CImage to render a gallery with images.
+
+kmom05
+- Classes Introduced
+	CContent
+	CFilter
+	CPage
+	CBlog
+- ADD php-markdown
+- Info
+	CContent handles the content on the page including add/edit/delete.
+	CFilter handles filtering of content text.
+	CPage extends CContent with page specific functionality.
+	CBlog extends CContent with blog specific functionality.
+
+kmom04.2
+- Classes Introduced
+	CMovieDB
+- Rebuild of framework after incomplete assignment
+	CMoveDB extends CHTMLTable with moviedatabase specific functionality.
+	Moved SQL Query generation from pagecontroller movieDB -> CMoveDB.
+	Moved moviedatabase specific functionality from CHTMLTable -> CMoveDB
+
+kmom04
+- Classes Introduced
+	CDatabase
+	CHTMLTable
+	CUser
+- Info
+	CDatabase masks the database connection for easier use.
+	CHTMLTable is used to display a database table as a table on the webpage.
+	CUser is used to authenticate a user to edit the webpage online.
+
+kmom03
+- No new classes
+- Info
+	Teoretical assignment to get familiar with SQL and Databases.
+
+kmom02
+- Classes introduced
+	CCalender
+	CDieGame
+	CDiePlayer
+	CDie
+- Info
+	CCalender is used to display either a full size or a mini calender, complete with red days, namedays, swedish flagdays and holidays.
+	CDieGame is a dice game.
+	CDiePlayer is used by CDieGame to store information about the players and score.
+	CDie is used by CDieGame to generate die throws in the game.
+
+kmom01
+- Classes introduced
+	CSource
+- Info
+	CSource is used to display source code of the webpage on the webpage itself.
