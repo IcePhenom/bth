@@ -1,0 +1,427 @@
+/**
+ * General elements
+ */
+body {
+  font-family: arial, sans-serif;
+  background-image:url(../img/back.jpg);
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+  background-position:center;
+}
+
+.sitetitle {
+  margin-left:20px;
+  font-size: 48px;
+  color:#CCC;
+}
+
+.siteslogan {
+  margin-left:20px;
+  font-style: italic;
+  color: #999;
+}
+
+*{
+  padding:0;
+  margin:0;
+}
+
+header{
+  width:100%;
+  height:50px;
+  background:linear-gradient(to bottom, #000 85%, #035 100%);
+}
+
+main{
+  width:100%;
+}
+
+section{
+  margin:auto;
+  width:950px;
+  min-height:150px;
+  background-color:rgba(0,0,0,0.5);
+  overflow:auto;
+  color: #BBB;
+}
+
+aside{
+  float:left;
+  width:200px;
+  min-height:150px;
+  padding-left:5px;
+  padding-right:5px;
+  border-left:1px solid #FFF;
+  overflow:auto;
+}
+
+footer{
+  margin:auto;
+  width:950px;
+  height:40px;
+  color:#CCC;
+  text-align:right;
+  margin-top:15px;
+  border-top:1px solid #BBB;
+  padding-top:15px;
+}
+
+.left{
+  float:left;
+}
+
+.main_top{
+  padding-top:10px;
+  padding-left:10px;
+}
+
+.main_center{
+  width:710px;
+  min-height:20em;
+  padding-left:10px;
+  padding-right:10px;
+  padding-bottom:10px;
+}
+
+h1{
+  font-size: 36px;
+  color: #09F;
+}
+
+h2{
+  font-size: 26px;
+  margin-top:10px;
+  color: #09F;
+}
+
+h3{
+  font-size: 20px;
+  margin-top:15px;
+  color: #09F;
+}
+
+p{
+  margin-top:10px;
+  margin-left:10px;
+  color: #CCC;
+}
+
+a{
+  text-decoration:none;
+  color:#FFF;
+}
+
+a:hover{
+  text-decoration:none;
+  color:#AAA;
+}
+
+/**
+ * Layout for DBTable
+ */
+.dbtable{
+  margin-top:10px;
+}
+
+.dbtable table{
+  width:75%;
+  margin:auto;
+  border-spacing:0px;
+}
+
+.dbtable a,
+.topbottomrow a{
+  text-decoration:none;
+  color:#FFF;
+}
+
+.dbtable a:hover,
+.topbottomrow a:hover{
+  text-decoration:none;
+  color:#AAA;
+}
+
+.dbtable tr:hover{
+  background-color:rgba(80,100,130,0.3);
+}
+
+.dbtable td,
+.dbtable th{
+  border-bottom:1px solid #FFF;
+  text-align: left;
+  padding-left:10px;
+}
+
+.logo{
+  width:50px;
+  height:40px;
+}
+
+/**
+ * Layout for calendar
+ */
+.calendar{
+  margin-top:5px;
+  margin-left:auto;
+  margin-right:auto;
+  padding-bottom:5px;
+  background-color:rgba(80,100,130,0.3);
+  border-radius:10px;
+}
+
+.calendarBig{
+  width:665px;
+}
+
+.calendarBigtd{
+  width:90px;
+}
+
+.calendarBig .month,
+.calendarBig .notMonth{
+  height:85px;
+  font-size:14px;
+}
+
+.calendarSmall{
+  width:200px;
+}
+
+.calendarSmalltd{
+  width:24px;
+  font-size:10px;
+}
+
+.calendarSmall .month,
+.calendarSmall .notMonth{
+  font-size:10px;
+}
+
+.calendar table{
+  border-spacing:0px;
+  margin-left:5px;
+}
+
+.center{
+  width:100%;
+  text-align: center;
+}
+
+li a{
+  text-decoration:none;
+  color:#FFF;
+}
+
+li a:hover{
+  text-decoration:none;
+  color:#AAA;
+}
+
+.center a{
+  text-decoration:none;
+  color:#FFF;
+}
+
+.center a:hover{
+  text-decoration:none;
+  color:#AAA;
+}
+
+.round{
+  padding-left:2px;
+  padding-bottom:2px;
+  border-left:1px solid #9097a1;
+  border-top:1px solid #9097a1;
+}
+
+.month{
+  background:linear-gradient(to bottom, #c9d3dd 1%, #bac1cb 100%);
+  color:#3c434b;
+}
+
+.notMonth{
+  background:linear-gradient(to bottom, #c0cad4 1%, #edf5f8 100%);
+  color:#999;
+}
+
+.redText{
+  color:#B0000B;
+}
+
+.todayBack{
+  color:#f5ffd4;
+  background:linear-gradient(to bottom, #5fa8ed 1%, #0578e3 100%);
+}
+
+.topImg{
+  margin-left:5px;
+  margin-top:5px;
+  border-radius:10px;
+}
+
+.week{
+  color:#DDD;
+  width:20px;
+  font-size:12px;
+}
+
+/**
+ * Layout for dice
+ */
+.dice
+{
+  display: inline-block;
+  padding: 0;
+  margin-top: 25px;
+  margin-left: 25px;
+  width: 32px;
+  height: 32px;
+  background: url(../img/dice.jpg) no-repeat;
+}
+
+.dice-1 { background-position: -160px 0px; }
+.dice-2 { background-position: -128px 0px; }
+.dice-3 { background-position:  -96px 0px; }
+.dice-4 { background-position:  -64px 0px; }
+.dice-5 { background-position:  -32px 0px; }
+.dice-6 { background-position:    0px 0px; }
+
+div ul{
+  margin-top:10px;
+  margin-left:10px;
+  list-style:none
+}
+
+/**
+ * Layout for menu
+ */
+nav{
+  margin:auto;
+  width:950px;
+  height:20px;
+}
+
+nav ul{
+  list-style:none;
+  position:relative;
+  display:inline-block;
+}
+nav ul:after{
+  content:"";
+  clear:both;
+  display:block;
+}
+nav ul li{
+  float:left;
+}
+nav ul li:hover {
+  background:linear-gradient(to bottom, rgba(0,0,0,0) 85%, #0AF 100%);
+}
+nav ul li a {
+  display:block;
+  padding:15px 25px;
+  color:#888;
+  font-size:16px;
+  font-family:"Courier New";
+  font-weight:bold;
+  text-decoration:none;
+}
+nav ul li a:hover {
+  color:#FFF;
+}
+nav ul li:hover > ul {
+  display:block;
+}
+nav ul ul {
+  display:none;
+  background:linear-gradient(to bottom, #000 30%, #333 100%);
+  padding:0;
+  position:absolute;
+  top:100%;
+}
+nav ul ul li {
+  float:none; 
+  position:relative;
+  border-bottom: 1px solid #035;
+}
+nav ul ul li a {
+  padding:8px 20px;
+}
+
+/**
+ * Layout for gallery
+ */
+ul.gallery {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+ul.gallery li {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+ul.gallery li {
+  border: 1px solid #ccc;
+  padding: 4px;
+}
+ul.gallery li figure  {
+  margin: 0;
+}
+ul.gallery li figure figcaption {
+  font-size: 0.85em;
+  color: #666;
+}
+ul.gallery li:hover  {
+  background-color: #ccc;
+}
+ul.gallery li:hover figcaption {
+  color: #111;
+}
+ul.gallery li a  {
+  text-decoration: none;
+}
+
+/**
+ * Layout for figure and displaying images.
+ */
+figure.figure {
+  display: table;
+  padding: 0;
+  margin: 16px 16px 22px 16px;
+}
+/* Chrome shinks images in td */
+figure.figure td img {
+  max-width: none;
+}
+figure.figure figcaption {
+  display: table-caption;
+  caption-side: bottom;
+  padding: 0;
+  font-style: italic;
+}
+
+/**
+ * Layour for Breadcrumb
+ */
+ul.breadcrumb {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 0 22px 0;
+}
+ul.breadcrumb li {
+  padding: 0;
+  margin: 0;
+  display: inline;
+}
+ul.breadcrumb a {
+  font-size: 0.85em;
+  text-decoration: none;
+  color: #666;
+}
+ul.breadcrumb a:hover {
+  text-decoration: underline;
+  color: #333;
+}
