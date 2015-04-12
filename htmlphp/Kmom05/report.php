@@ -47,6 +47,23 @@ $pageId = "report";
 	<p>Med CSS kan man på ett väldigt enkelt och snabbt sätt skapa en ny design på en sida utan att man behöver ändra på HTML strukturer nämnvärt.</p>
 	<p>Ja jag lyckades med style väljaren, det extra CSS gjorde jag genom att välja färgglada kombinationer för att styla sidan, går under namnet fancy.css.</p>
 
+	<h2>Kmom05: HTML-formulär och PHP</h2>
+	<p><strong>Hur momentet funkade. Reflektera över svårigheter/problem/lösningar/resultatet, etc.</strong></p>
+	<p>Har byggt CMS tidigare och är därför van med att låta användaren kunna utföra CRUD på data som ligger på sidan, dock har detta alltid varit gentemot en databas och inte mot filer på server. Därför valde jag att kopiera koden rakt av för att sedan kolla igenom den för att förstå den.</p>
+	<p>Skillnaden mellan CRUD på databas och filer är ganska obefintlig för den faktiska användaren av sidan och ytterst liten på programmerings sidan då man med rätt struktur enkelt kan byta ut sättet som datan lagras på utan att behöva göra några större förändringar på kodbasen som hanterar presentation av datan på sidan.</p>
+	<p>På grund av min tidigare erfarenhet och koppiering av koden uppstod det inga problem under detta moment och lösningen är den som mos har gjort.</p>
+	<p><strong>Hur känns det med PHP-programmeringen, har du kommit in i det? Är det svårt?</strong></p>
+	<p>Jag skulle säga att jag är med på det mesta och har det ganska lätt då jag sysslat med PHP en längre tid. Bygger generellt det mesta utan att egentligen kolla på färdig kod, men dock om man stöter på problem kan det vara bra med exempelkod som man kan stämma av med för att se om där är något uppenbart fel som man gjort. Annars flyter det på utan större avbrott.</p>
+	<p><strong>Vilka är dina tips till en ovan PHP-programmerare?</strong></p>
+	<p>Mitt tips är att man kör igenom en tutorial som går igenom grunderna för PHP och verkligen följer den.</p>
+	<p>w3schools http://www.w3schools.com/php/ har en php tutorial som är bra uppdelad och strukturerad för att man snabbt och enkelt som nybörjare skall kunna sätta sig in i PHP, en stor fördel med sidan är att man kan köra sin kod direkt på sidan och behöver därför inte tillgång till en server eller sätta upp en egen och detta gör det mycket lättare att börja programmera PHP.</p>
+	<p>När man sedan är mer avancerad och börjar bygga större saker är det en fördel om man känner till dokumentationen för PHP http://php.net/docs.php där all funktionalitet listas och ofta finns det även exempel på hur man använder funktionerna.</p>
+	<p><strong>Har du nytta av guiden php20?</strong></p>
+	<p>Har ärligt inte läst guiden utan bara skummat den och utifrån det jag har sett verkar den ge en bra grund för att börja programmera PHP samt struktur och syntax för PHP.</p>
+	<p><strong>Sammanfattning</strong></p>
+	<p>Slutligen vill jag säga att det är ett vettigt kursmoment då många websidor idag byggs med någon form av CMS och då är det bra att man kan CRUD för att förstå hur data hanteras.</p>
+	<p>Att lagra data direkt i filer kan vara effektivare om man endast har en liten websida där det inte lönar sig att sätta upp en stor databas för att hantera datan. Dock skulle jag inte rekomendera detta utan istället om man inte kan/vill ha en riktig databas välja att använda SQLite som i nästa kursmoment som förstahands val istället.</p>
+
 	<?php include("incl/byline.php"); ?>
 </section>
 
