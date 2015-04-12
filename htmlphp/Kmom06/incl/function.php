@@ -32,3 +32,14 @@ function logo($stylesheet, $logotype) {
     return "<a href='me.php'><img src='img/logo.png' alt='htmlphp logo' width=300 height=70></a>";
   }
 }
+
+function menu() {
+  return "<nav class='navmenu'><br>
+    <a id='me-' href='me.php'>Me</a><br>
+    <a id='report-' href='report.php'>Redovisning</a><br>
+    <a id='test-' href='test.php'>Test</a><br>
+    <a id='style-' href='style.php'>Style</a><br>
+    <a id='blokket-' href='blokket.php'>Blokket</a><br>
+    <a id='source-' href='viewsource.php'>Källkod</a><br>
+  </nav>";
+}
