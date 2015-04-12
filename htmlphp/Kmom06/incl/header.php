@@ -21,7 +21,7 @@
 	<header id="above">
 		<?php echo userLoginMenu(); ?>
 	  <!-- Relateted links -->
-	  <?php echo menuAbove(); ?>
+	  <?php echo menuRelated(); ?>
 	</header>
 	<!-- Header -->
 	<header>
