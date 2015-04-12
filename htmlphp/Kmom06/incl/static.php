@@ -1,4 +1,9 @@
 <?php
+
+/**
+ * --- header ---------------------------------------------
+ */
+
 function stylesheet($stylesheet) {
   if (isset($stylesheet)) {
     return "<link rel='stylesheet' href='style/$stylesheet;'";
@@ -21,6 +26,7 @@ function menuAbove() {
     <a href='../Kmom02/me.php'>kmom02</a><br>
     <a href='../Kmom03/me.php'>kmom03</a><br>
     <a href='../Kmom04/me.php'>kmom04</a><br>
+    <a href='../Kmom05/me.php'>kmom05</a><br>
   </nav>";
 }
 
@@ -43,6 +49,10 @@ function menu() {
     <a id='source-' href='viewsource.php'>Källkod</a><br>
   </nav>";
 }
+
+/**
+ * --- footer ---------------------------------------------
+ */
 
 function tools() {
   return "<a href='http://validator.w3.org/check/referer'>HTML5</a><br>
