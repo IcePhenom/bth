@@ -1,53 +1,15 @@
 <?php
 include("incl/config.php");
-$title = "Blokket";
+$title = "Blokket, annonsplatsen";
 $pageId = "blokket";
 $pageStyle = '';
 
+$path = "incl/blokket2";
+$file = "default.php";
+blokket2($title, $file);
+
 // Path to the SQLite database file
 $dbPath = dirname(__FILE__) . "/incl/blokket2/data/blokket2.sqlite";
-
-// Check if the url contains a querystring with a page-part.
-$p = isset($_GET["p"]) ? $_GET["p"] : null;
-
-// Is the page known?
-$path = "incl/blokket2";
-$file = null;
-switch($p) {
-  case "init":
-    $pageTitle   = "Initiera annonserna";
-    $file        = "init.php";
-    break;
-
-  case "update":
-    $pageTitle   = "Visa och uppdatera annonser";
-    $file        = "update.php";
-    break;
-
-  case "create":
-    $pageTitle   = "Skapa ny annons";
-    $file        = "create.php";
-    break;
-
-  case "delete":
-    $pageTitle   = "Radera annons";
-    $file        = "delete.php";
-    break;
-
-  case "read":
-    $pageTitle   = "Visa annons";
-    $file        = "read.php";
-    break;
-
-  case "read-all":
-    $pageTitle   = "Visa alla annonser";
-    $file        = "read_all.php";
-    break;
-
-  default:
-    $pageTitle   = "Blokket, annonsplatsen";
-    $file        = "default.php";
-}
 ?>
 
 <?php include("incl/header.php"); ?>
