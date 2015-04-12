@@ -1,14 +1,10 @@
-<?php
-include('static.php');
-?>
-
 <!doctype html>
 <html lang="sv">
 <head>
 	<meta charset="utf-8">
 	<title><?=$title?></title>
 	<!-- links to external stylesheets -->
-	<?php echo stylesheet($_SESSION['stylesheet']); ?>
+	<?php echo stylesheet(); ?>
 
 	<link rel="shortcut icon" href="img/favicon.ico">
 
@@ -29,7 +25,7 @@ include('static.php');
 	</header>
 	<!-- Header -->
 	<header>
-		<?php echo logo($_SESSION['stylesheet'], "fancy.css"); ?>
+		<?php echo logo(); ?>
 
 		<?php echo menu(); ?>
 	</header>

@@ -1,8 +1,8 @@
-<?php include("incl/config.php"); ?>
-
 <?php
+include("incl/config.php");
 $title = "Mina redovisningar av kursmomenten";
 $pageId = "report";
+$pageStyle = '';
 ?>
 
 <?php include("incl/header.php"); ?>

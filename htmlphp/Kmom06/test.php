@@ -1,6 +1,7 @@
 <?php include("incl/config.php");
 $title = "Test sida";
 $pageId = "test";
+$pageStyle = '';
 
 // Check if the url contains a querystring with a page-part.
 $p = isset($_GET["p"])? $_GET["p"] : null;

@@ -2,6 +2,7 @@
 include("incl/config.php");
 $title = "Blokket";
 $pageId = "blokket";
+$pageStyle = '';
 
 // Path to the SQLite database file
 $dbPath = dirname(__FILE__) . "/incl/blokket2/data/blokket2.sqlite";

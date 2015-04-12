@@ -1,8 +1,8 @@
-<?php include("incl/config.php"); ?>
-
 <?php
+include("incl/config.php");
 $title = "Min Me-sida om mig själv";
 $pageId = "me";
+$pageStyle = '';
 ?>
 
 <?php include("incl/header.php"); ?>

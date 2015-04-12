@@ -1,8 +1,8 @@
 <?php
 include("incl/config.php");
-
 $title = "Mina redovisningar av kursmomenten";
 $pageId = "source";
+$pageStyle = '';
 
 $sourceBasedir=dirname(__FILE__);
 $sourceNoEcho=true;

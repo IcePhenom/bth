@@ -13,6 +13,7 @@ include_once(dirname(__FILE__) . "/../src/common.php");
 
 // include functions for login & logout
 include_once(dirname(__FILE__) . "/../src/login.php");
+include_once(dirname(__FILE__) . "/static.php");
 
 // account and password that can login
 $userAccount = "john";
