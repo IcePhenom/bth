@@ -1,5 +1,5 @@
 <?php
-include('function.php');
+include('static.php');
 ?>
 
 <!doctype html>

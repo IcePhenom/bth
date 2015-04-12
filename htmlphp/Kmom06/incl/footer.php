@@ -1,3 +1,7 @@
+<?php
+include('static.php');
+?>
+
 <!--- Footer -->
 <div id="footer">
 <hr>
