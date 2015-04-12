@@ -13,7 +13,7 @@ if(isset($_POST['doSave'])) {
 
   // Add all form entries to an array
   $report[] = strip_tags($_POST["title"], $strip);
-  $report[] = strip_tags($_POST["description"], $strip);
+  $report[] = $_POST["description"];
   $report[] = strip_tags($_POST["id"], $strip);
 
   $stmt = $db->prepare("UPDATE report SET title=?, description=? WHERE id=?");
