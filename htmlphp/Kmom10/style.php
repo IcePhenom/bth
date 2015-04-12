@@ -1,32 +1,13 @@
 <?php
 include("incl/config.php");
-$pageId = "style";
+$title     = "Välj style för webbplatsen.";
+$pageId    = "style";
+$pageStyle = '';
 
-// Check if the url contains a querystring with a page-part.
-$p = isset($_GET["p"]) ? $_GET["p"] : null;
-
-// Is the page known?
 $path = "incl/style";
-$file = null;
-switch($p) {
-  case "choose-stylesheet":
-    $title   = "Välj Stylesheet";
-    $file    = "choose_stylesheet.php";
-    break;
+$file = "default.php";
 
-  case "edit-stylesheet":
-    $title   = "Edit Stylesheet";
-    $file    = "edit_stylesheet.php";
-    break;
-
-  case "choose-stylesheet-process":
-    include("$path/choose_stylesheet_process.php");
-    break;
-
-  default:
-    $title   = "Välj style för webbplatsen.";
-    $file    = "default.php";
-}
+style($title, $file);
 ?>
 
 <?php include("incl/header.php"); ?>
