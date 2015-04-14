@@ -29,7 +29,7 @@ $pageId = "report";
 	<p>Guiderna skumläste jag bara då det mesta sitter redan, men de verkar som en bra genomgång och som ger en bra grund för de som är nybörjare.</p>
 	<p>Strukturen är helt ok då man separerar de olika kursmomenten vilket underlättar att se utvecklingen som sker, samt underlättar rättningen för er.</p>
 
-	<h2>Kmom03: Dynamisk webbplats med PHP</h2>
+	<h2>Kmom 03: Dynamisk webbplats med PHP</h2>
 	<p>Jag har tidigare jobbat med $_GET, $_POST, $_SESSION och $_SERVER vilket gjorde att momentet gick väldigt smidigt och utan problem.</p>
 	<p>Trevlig liten "bugg" med getCurrentUrl(), och jag tycker den skall finnas kvar då de som inte är uppmärksamma får skylla sig själva.</p>
 	<p>Återigen en vettig genomgång av de grundläggande variablerna i PHP som man måste kunna hantera om man skall programera PHP.</p>
