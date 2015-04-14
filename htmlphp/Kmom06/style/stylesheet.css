@@ -3,6 +3,7 @@
 
 */
 @import url(forms.css);
+@import url(table.css);
 
 /* general
 --------------------------------------------------------
@@ -168,6 +169,9 @@ blockquote.code {font-family:monospace;white-space:pre;background:#F2F2F2;
 body#me a#me-,
 body#report a#report-,
 body#test a#test-,
+body#style a#style-,
+body#blokket a#blokket-,
+body#blokket2 a#blokket2-,
 body#source a#source- {background:#858585;border:2px solid #656565;}
 
 
