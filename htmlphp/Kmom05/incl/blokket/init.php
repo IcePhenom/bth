@@ -27,8 +27,3 @@ $files = readDirectory($path);
   <li><?php echo $val; ?>
 <?php endforeach; ?>
 </ul>
-
-<p>
-  <a href="incl/blokket/init.php">Klicka på denna länk för att återställa annonsdatabasen till sitt ursprungliga skick. Befintliga annonser
-raderas och en uppsättning default-annonser skapas</a>.
-</p>
