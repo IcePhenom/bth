@@ -29,6 +29,6 @@ $files = readDirectory($path);
 </ul>
 
 <p>
-  <a href="init.php">Klicka på denna länk för att återställa annonsdatabasen till sitt ursprungliga skick. Befintliga annonser
+  <a href="incl/blokket/init.php">Klicka på denna länk för att återställa annonsdatabasen till sitt ursprungliga skick. Befintliga annonser
 raderas och en uppsättning default-annonser skapas</a>.
 </p>
