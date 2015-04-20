@@ -50,11 +50,11 @@ function menu() {
     <a id='source-' href='viewsource.php'>Källkod</a>
     <a id='data-' href='data.php'>Data</a>
 
-    <a id='hem-' href='index.php'>Data</a>
-    <a id='data-' href='data.php'>Data</a>
-    <a id='data-' href='data.php'>Data</a>
-    <a id='data-' href='data.php'>Data</a>
-    <a id='data-' href='data.php'>Data</a>
+    <a id='index-' href='index.php'>Hem</a>
+    <a id='content-' href='content.php'>Innehåll</a>
+    <a id='object-' href='object.php'>Objekt</a>
+    <a id='article-' href='article.php'>Artiklar</a>
+    <a id='about-' href='about.php'>Om</a>
   </nav>";
 }
 
