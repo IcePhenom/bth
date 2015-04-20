@@ -49,6 +49,12 @@ function menu() {
     <a id='blokket2-' href='blokket2.php'>Blokket2</a>
     <a id='source-' href='viewsource.php'>Källkod</a>
     <a id='data-' href='data.php'>Data</a>
+
+    <a id='hem-' href='index.php'>Data</a>
+    <a id='data-' href='data.php'>Data</a>
+    <a id='data-' href='data.php'>Data</a>
+    <a id='data-' href='data.php'>Data</a>
+    <a id='data-' href='data.php'>Data</a>
   </nav>";
 }
 
