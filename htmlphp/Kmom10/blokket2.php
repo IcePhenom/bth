@@ -1,7 +1,7 @@
 <?php
 include("incl/config.php");
-$title = "Blokket, annonsplatsen";
-$pageId = "blokket";
+$title = "Blokket2, annonsplatsen";
+$pageId = "blokket2";
 $pageStyle = '';
 
 $path = "incl/blokket2";
