@@ -1,5 +1,7 @@
 <?php
 
+// http://www.student.bth.se/~jocu14/htmlphp/kmom10/about.php
+
 /**
  * --- header ---------------------------------------------
  */
@@ -27,6 +29,8 @@ function menuRelated() {
     <a href='../Kmom03/me.php'>kmom03</a>
     <a href='../Kmom04/me.php'>kmom04</a>
     <a href='../Kmom05/me.php'>kmom05</a>
+    <a href='../Kmom06/me.php'>kmom06</a>
+    <a href='../Kmom10/me.php'>kmom10</a>
   </nav>";
 }
 
@@ -41,21 +45,13 @@ function logo() {
 
 function menu() {
   return "<nav class='navmenu'>
-    <a id='me-' href='me.php'>Me</a>
-    <a id='report-' href='report.php'>Redovisning</a>
-    <a id='test-' href='test.php'>Test</a>
-    <a id='style-' href='style.php'>Style</a>
-    <a id='blokket-' href='blokket.php'>Blokket</a>
-    <a id='blokket2-' href='blokket2.php'>Blokket2</a>
-    <a id='source-' href='viewsource.php'>Källkod</a>
-    <a id='data-' href='data.php'>Data</a>
-
     <a id='index-' href='index.php'>Hem</a>
-    <a id='content-' href='content.php'>Innehåll</a>
-    <a id='object-' href='object.php'>Objekt</a>
     <a id='article-' href='article.php'>Artiklar</a>
-    <a id='about-' href='about.php'>Om</a>
-  </nav>";
+    <a id='object-' href='object.php'>Objekt</a>
+    <a id='gallery-' href='gallery.php'>Galleri</a>
+    <a id='about-' href='about.php'>Om BMO</a>"
+    . userLoginMenu() .
+  "</nav>";
 }
 
 /**
@@ -71,104 +67,11 @@ function tools() {
   <a href='http://validator.w3.org/checklink?uri=<?php echo getCurrentUrl(); ?>'>Links</a>";
 }
 
-
-function manual() {
-  return "<a href='http://www.w3.org/2009/cheatsheet/'>Cheatsheet</a>
-  <a href='http://dev.w3.org/html5/spec/'>HTML5</a>
-  <a href='http://www.w3.org/TR/CSS2/'>CSS2</a>
-  <a href='http://www.w3.org/Style/CSS/current-work#CSS3'>CSS3</a>
-  <a href='http://php.net/manual/en/index.php'>PHP</a>";
-}
-
-function pageTime($pageTimeGeneration) {
-  if(isset($pageTimeGeneration)) {
-    return "Page generated in " . round(microtime(true)-$pageTimeGeneration, 5) . " seconds";
-  }
-}
-
 /**
  * --- main -----------------------------------------------
  */
 
-function report() {
-  $db = new PDO("sqlite:incl/data/data/static.sqlite");
-  $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
-
-  $stmt = $db->prepare('SELECT * FROM report;');
-  $stmt->execute();
-  $res = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-  $ret = '';
-
-  foreach ($res as $report) {
-    $ret .= "<h2>" . $report['title'] . "</h2>";
-    $ret .= $report['description'];
-  }
-
-  return $ret;
-}
-
-function style(&$title, &$file) {
-  if (isset($_GET["p"])) {
-    switch($_GET["p"]) {
-      case "choose-stylesheet":
-        $title = "Välj Stylesheet";
-        $file  = "choose_stylesheet.php";
-        return;
-
-      case "edit-stylesheet":
-        $title = "Edit Stylesheet";
-        $file  = "edit_stylesheet.php";
-        return;
-
-      case "choose-stylesheet-process":
-        include("style/choose_stylesheet_process.php");
-        return;
-    }
-  }
-}
-
-function test(&$title, &$file) {
-  if (isset($_GET["p"])) {
-    switch($_GET["p"]) {
-      case "kmom03-get":
-        $title = "Test kmom03: Visa \$_GET";
-        $file  = "kmom03_get.php";
-        return;
-      case "kmom03-getform":
-        $title = "Test kmom03: Visa form med \$_GET";
-        $file  = "kmom03_getform.php";
-        return;
-      case "kmom03-postform":
-        $title = "Test kmom03: Visa form med \$_POST";
-        $file  = "kmom03_postform.php";
-        return;
-      case "kmom03-validate":
-        $title = "Test kmom03: Visa validering";
-        $file  = "kmom03_validate.php";
-        return;
-      case "kmom03-server":
-        $title = "Test kmom03: Visa \$_SERVER";
-        $file  = "kmom03_server.php";
-        return;
-      case "kmom03-sessiondestroy":
-        $title = "Test kmom03: Förstör sessionen";
-        $file  = "kmom03_sessiondestroy.php";
-        destroySession();
-        return;
-      case "kmom03-sessionchange":
-        $title = "Test kmom03: Ändra värden i sessionen";
-        $file  = "kmom03_sessionchange.php";
-        return;
-      case "kmom03-session":
-        $title = "Test kmom03: ";
-        $file  = "kmom03_session.php";
-        return;
-    }
-  }
-}
-
-function blokket(&$title, &$file) {
+function article(&$title, &$file) {
   if (isset($_GET["p"])) {
     switch($_GET["p"]) {
       case "init":
@@ -187,44 +90,9 @@ function blokket(&$title, &$file) {
         $title = "Radera annons";
         $file  = "delete.php";
         return;
-      case "read":
-        $title = "Visa annons";
-        $file  = "read.php";
-        return;
       case "read-all":
         $title = "Visa alla annonser";
-        $file  = "read_all.php";
-        return;
-    }
-  }
-}
-
-function blokket2(&$title, &$file) {
-  if (isset($_GET["p"])) {
-    switch($_GET["p"]) {
-      case "init":
-        $title = "Initiera annonserna";
-        $file  = "init.php";
-        return;
-      case "update":
-        $title = "Visa och uppdatera annonser";
-        $file  = "update.php";
-        return;
-      case "create":
-        $title = "Skapa ny annons";
-        $file  = "create.php";
-        return;
-      case "delete":
-        $title = "Radera annons";
-        $file  = "delete.php";
-        return;
-      case "read":
-        $title = "Visa annons";
-        $file  = "read.php";
-        return;
-      case "read-all":
-        $title = "Visa alla annonser";
-        $file  = "read_all.php";
+        $file  = "default.php";
         return;
     }
   }
@@ -246,14 +114,5 @@ function authenticate(&$title, &$content) {
 function authPrint($content) {
   if(isset($content)) {
     return $content;
-  }
-  else {
-    $ret = "<h1>Status login / logout</h1>
-    <p>Denna webbplats har skyddade delar. Du måste logga in för att komma åt dem.</p>
-    <p>För tillfället är du:";
-    $ret .= userIsAuthenticated() ? "<strong>inloggad</strong>.</p>" : "<strong>ej inloggad</strong>.</p>";
-    $ret .= userIsAuthenticated() ? "<p><a href='?p=logout'>Vill du logga ut</a>?</p>" : "<p><a href='?p=login'>Vill du logga in</a>?</p>";
-
-    return $ret;;
   }
 }

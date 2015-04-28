@@ -17,12 +17,6 @@
 </head>
 <!-- The body id helps with highlighting current menu choice -->
 <body<?php echo isset($pageId) ? " id='$pageId' " : ""; ?>>
-	<!-- Above header -->
-	<header id="above">
-		<?php echo userLoginMenu(); ?>
-	  <!-- Relateted links -->
-	  <?php echo menuRelated(); ?>
-	</header>
 	<!-- Header -->
 	<header>
 		<?php echo logo(); ?>

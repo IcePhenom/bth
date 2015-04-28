@@ -3,7 +3,6 @@
 
 */
 @import url(forms.css);
-@import url(table.css);
 
 /* general
 --------------------------------------------------------
@@ -125,7 +124,9 @@ footer.byline {
   font-style:italic;
 }
 
-footer.byline img {padding:2px;outline:#999999 groove 1px;
+footer.byline img {
+  padding:2px;
+  outline:#999999 groove 1px;
 }
 
 
@@ -166,14 +167,12 @@ blockquote.code {font-family:monospace;white-space:pre;background:#F2F2F2;
 /* highlight current choice in navigation menu
 --------------------------------------------------------
 */
-body#me a#me-,
-body#report a#report-,
-body#test a#test-,
-body#style a#style-,
-body#blokket a#blokket-,
-body#blokket2 a#blokket2-,
-body#data a#data-,
-body#source a#source- {background:#858585;border:2px solid #656565;}
+body#index a#index-,
+body#object a#object-,
+body#about a#about-,
+body#login a#login-,
+body#logout a#logout-,
+body#article a#article- {background:#858585;border:2px solid #656565;}
 
 
 /* misc
@@ -186,6 +185,47 @@ body#source a#source- {background:#858585;border:2px solid #656565;}
   float:right;
 }
 
+.front-image {
+  width:100px;
+  height:250px;
+  float:right;
+}
+
 .aside_right {
   width:22%;
+}
+
+.about {
+  padding: 1em;
+  margin-bottom: 1em;
+}
+
+.about-images {
+  float:left;
+  padding:10px;
+  border:solid 1px #D5D5D5;
+  background:#fff;
+  margin:0 10px 0 0;
+  text-align:center;
+}
+
+.about-images img {
+  width:100%;
+  border-radius:2px;
+}
+
+.article {
+  background: #EEEEEE;
+  padding: 1em;
+  margin-bottom: 1em;
+}
+
+.articleauth {
+  clear: both;
+  border-top: 1px dashed #999999;
+  margin-top:2em;
+  padding: 1em;
+  color: #555555;
+  font-size: smaller;
+  font-style:italic;
 }

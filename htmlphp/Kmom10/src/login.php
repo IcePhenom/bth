@@ -36,24 +36,27 @@ function userIsAuthenticated() {
 function userLoginMenu() {
   // array with all menu items
   $menu = array(
-    "login"   => "login.php?p=login",
-    "status"   => "login.php",
-    "logout"   => "login.php?p=logout",
+    "login"   => array(
+      "title" => "Logga in",
+      "link" => "login.php?p=login",
+    ),
+    "logout" => array(
+      "title" => "Logga ut",
+      "link"   => "login.php?p=logout",
+    ),
   );
 
   // check if user is logged in or not, alter the menu depending on the result
   if(userIsAuthenticated()) {
     unset($menu['login']);
   } else {
-    unset($menu['status']);
     unset($menu['logout']);
   }
 
-  $html = "<nav class='login'>";
+  $html = "";
   foreach($menu as $key=>$val) {
-    $html .= "<a href='$val'>$key</a> ";
+    $html .= "<a id='$key-' href='".$val['link']."'>".$val['title']."</a> ";
   }
-  $html .= "</nav>";
   return $html;
 }
 
@@ -134,7 +137,7 @@ function userLogin() {
 //
 function userLogout() {
   unset($_SESSION['authenticated']);
-  return "<h1>Utloggad</h1><p>Du är nu utloggad.</p>";
+  return "<h1>Utloggad</h1><p>Du är nu utloggad.</p>" . userLogin();
 }
 
 
