@@ -1,4 +1,4 @@
-<h1>Initiera och kontrollera annonsdatabasen</h1>
+<h1>Initiera och kontrollera artikeldatabasen</h1>
 
 <p>Databasfilen sparas i katalogen:<br> <code><?php echo dirname($dbPath); ?></code></p>
 
@@ -38,5 +38,5 @@ if(is_file($dbPath)) {
 <?php endif; ?>
 
 
-<p><a href="?p=init&amp;create-database">Klicka på denna länk för att återställa annonsdatabasen till sitt ursprungliga skick. Befintliga annonser
-raderas och en uppsättning default-annonser skapas</a>.</p>
+<p><a href="?p=init&amp;create-database">Klicka på denna länk för att återställa artikeldatabasen till sitt ursprungliga skick. Befintliga artikel
+raderas och en uppsättning default-artikel skapas</a>.</p>

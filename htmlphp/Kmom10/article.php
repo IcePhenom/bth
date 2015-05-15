@@ -4,12 +4,12 @@ $title = "Artiklar";
 $pageId = "article";
 $pageStyle = '';
 
-$path = "incl/bmo";
+$path = "incl/article";
 $file = "default.php";
-article($title, $file);
+f_article($title, $file);
 
 // Path to the SQLite database file
-$dbPath = dirname(__FILE__) . "/incl/bmo/data/bmo.sqlite";
+$dbPath = dirname(__FILE__) . "/incl/data/bmo.sqlite";
 ?>
 
 <?php include("incl/header.php"); ?>
@@ -24,8 +24,6 @@ $dbPath = dirname(__FILE__) . "/incl/bmo/data/bmo.sqlite";
     <article class="left justify-para">
   <?php } ?>
     <?php include("$path/$file"); ?>
-    <?php include("incl/byline.php"); ?>
-    <hr>
   </article>
 </section>
 <?php include("incl/footer.php"); ?>

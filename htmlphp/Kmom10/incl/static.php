@@ -71,7 +71,7 @@ function tools() {
  * --- main -----------------------------------------------
  */
 
-function article(&$title, &$file) {
+function f_article(&$title, &$file) {
   if (isset($_GET["p"])) {
     switch($_GET["p"]) {
       case "init":
@@ -92,6 +92,33 @@ function article(&$title, &$file) {
         return;
       case "read-all":
         $title = "Visa alla annonser";
+        $file  = "default.php";
+        return;
+    }
+  }
+}
+
+function f_object(&$title, &$file) {
+  if (isset($_GET["p"])) {
+    switch($_GET["p"]) {
+      case "init":
+        $title = "Initiera objekten";
+        $file  = "init.php";
+        return;
+      case "update":
+        $title = "Visa och uppdatera objekt";
+        $file  = "update.php";
+        return;
+      case "create":
+        $title = "Skapa nytt objekt";
+        $file  = "create.php";
+        return;
+      case "delete":
+        $title = "Radera objekt";
+        $file  = "delete.php";
+        return;
+      case "read-all":
+        $title = "Visa alla objekt";
         $file  = "default.php";
         return;
     }

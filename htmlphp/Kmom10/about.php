@@ -27,7 +27,7 @@ $res = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <div class='about'>
       <strong><?php echo $article['title']; ?></strong><br>
       <figure class="about-images">
-        <img src="img/bmo/ronnyholm.jpg" width="500" height="250" alt="Bild på Ronny Holm">
+        <img src="img/bmo/ronnyholm.jpg" width="400" height="250" alt="Bild på Ronny Holm">
         <figcaption>
           <p>Ronny Holm, organisationschef SKKF</p>
         </figcaption>
