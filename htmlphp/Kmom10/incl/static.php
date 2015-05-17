@@ -1,7 +1,4 @@
 <?php
-
-// http://www.student.bth.se/~jocu14/htmlphp/kmom10/about.php
-
 /**
  * --- header ---------------------------------------------
  */
@@ -36,10 +33,10 @@ function menuRelated() {
 
 function logo() {
   if (isset($_SESSION['stylesheet']) && $_SESSION['stylesheet'] == "fancy.css") {
-    return "<a href='me.php'><img src='img/fancy.png' alt='fancy logo' width=200 height=90></a>";
+    return "<a href='index.php'><img src='img/fancy.png' alt='fancy logo' width=200 height=90></a>";
   }
   else {
-    return "<a href='me.php'><img src='img/logo.png' alt='htmlphp logo' width=300 height=70></a>";
+    return "<a href='index.php'><img src='img/logo.png' alt='htmlphp logo' width=300 height=70></a>";
   }
 }
 
