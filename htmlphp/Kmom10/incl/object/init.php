@@ -12,16 +12,14 @@
 <?php
 // Creating the database and initiating it with content
 if(isset($_GET['create-database'])) {
-  include(dirname(__FILE__) . "/init_database.php");
+  include(dirname(dirname(__FILE__)) . "/data/init_database.php");
 }
 ?>
 
 <?php
 // Testing the connection with the database
-// The $dbPath is defined in blokket2.php
+// The $dbPath is defined in static.php
 if(is_file($dbPath)) {
-  $db = new PDO("sqlite:$dbPath");
-  $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING); // Display errors, but continue script
   echo "<p class='success'>Databasfilen <code>$dbPath</code> finns och kunde öppnas.</p>";
 } else {
   echo "<p class='alert'>Databasfilen finns ej. <a href='?p=init&amp;create-database'>Klicka här för att skapa och initiera databasen</a>.</p>";

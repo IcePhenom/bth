@@ -1,11 +1,5 @@
 <?php
 //
-// Connect to the database
-//
-$db = new PDO("sqlite:$dbPath");
-$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING); // Display errors, but continue script
-
-//
 // Check if Save-button was pressed, save the ad if true.
 //
 if(isset($_POST['doDelete'])) {
