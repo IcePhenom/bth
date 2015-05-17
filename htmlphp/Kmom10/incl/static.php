@@ -8,8 +8,7 @@ function stylesheet() {
     return "<link rel='stylesheet' href='style/" . $_SESSION['stylesheet'] . "'";
   }
   else {
-      return "<link rel='stylesheet' href='style/stylesheet.css' title='General stylesheet'>
-      <link rel='alternate stylesheet' href='style/debug.css' title='Debug stylesheet'>";
+      return "<link rel='stylesheet' href='style/stylesheet.css' title='General stylesheet'>";
   };
 }
 
@@ -56,12 +55,13 @@ function menu() {
  */
 
 function tools() {
+  $url = getCurrentUrl();
   return "<a href='http://validator.w3.org/check/referer'>HTML5</a>
   <a href='http://jigsaw.w3.org/css-validator/check/referer'>CSS</a>
   <a href='http://jigsaw.w3.org/css-validator/check/referer?profile=css3'>CSS3</a>
   <a href='http://validator.w3.org/unicorn/check?ucn_uri=referer&amp;ucn_task=conformance'>Unicorn</a>
-  <a href='http://validator.w3.org/i18n-checker/check?uri=<?php echo getCurrentUrl(); ?>'>i18n</a>
-  <a href='http://validator.w3.org/checklink?uri=<?php echo getCurrentUrl(); ?>'>Links</a>";
+  <a href='http://validator.w3.org/i18n-checker/check?uri=" . $url . "'>i18n</a>
+  <a href='http://validator.w3.org/checklink?uri=" . $url . "'>Links</a>";
 }
 
 /**
