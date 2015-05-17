@@ -5,13 +5,6 @@ $pageId = "about";
 $pageStyle = '';
 
 //
-// Connect to the database
-//
-$dbPath = dirname(__FILE__) . "/incl/bmo/data/bmo.sqlite";
-$db = new PDO("sqlite:$dbPath");
-$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING); // Display errors, but continue script
-
-//
 // Read from database
 //
 $stmt = $db->prepare('SELECT * FROM Article WHERE category = "about"');

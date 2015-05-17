@@ -7,9 +7,6 @@ $pageStyle = '';
 $path = "incl/article";
 $file = "default.php";
 f_article($title, $file);
-
-// Path to the SQLite database file
-$dbPath = dirname(__FILE__) . "/incl/data/bmo.sqlite";
 ?>
 
 <?php include("incl/header.php"); ?>
