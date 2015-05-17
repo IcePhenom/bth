@@ -38,7 +38,7 @@ header#above{font-family:arial,helvetica,sans-serif;border-bottom:1px solid #E6E
 /* set width and center page */
 header,
 section#content,
-footer#bottom{margin:0 auto;width:950px;}
+footer#bottom{margin:0 auto;width:1150px;}
 
 /* add common padding to main content block */
 section#content{padding:1em 0 1em 0;}
@@ -252,4 +252,23 @@ body#article a#article- {background:#858585;border:2px solid #656565;}
 
 .obj_img img{
   width: 250px;
+}
+
+#pictures{
+  list-style: none outside none;
+  padding: 0;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+#pictures li {
+  background: #FFF8DC;
+  float: left;
+  width: 250px;
+  height: 250px;
+  list-style: none outside;
+  text-align: center;
+  border: 2px solid;
+  margin-left: 5px;
+  margin-bottom: 5px;
 }
