@@ -51,7 +51,7 @@ $select .= "</select>";
     <input type="hidden" name="id" value="<?php echo $current['id']; ?>">
 
     <p>
-      <label for="input1">Annonser:</label><br>
+      <label for="input1">Artiklar:</label><br>
       <?php echo $select; ?>
     </p>
 

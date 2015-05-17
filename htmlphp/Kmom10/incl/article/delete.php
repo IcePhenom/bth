@@ -30,8 +30,8 @@ foreach($res as $article) {
 $select .= "</select>";
 ?>
 
-<h1>Ta bort en annons</h1>
-<p>Välj en annons och klicka knappen "Radera" för att ta bort artiklen.</p>
+<h1>Ta bort en artikel</h1>
+<p>Välj en artikel och klicka knappen "Radera" för att ta bort artiklen.</p>
 
 <form method="post">
   <fieldset>
