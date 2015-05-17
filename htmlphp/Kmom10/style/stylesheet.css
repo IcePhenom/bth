@@ -229,3 +229,27 @@ body#article a#article- {background:#858585;border:2px solid #656565;}
   font-size: smaller;
   font-style:italic;
 }
+
+.object {
+  float: left;
+  background: #EEEEEE;
+  padding: 1em;
+  margin-bottom: 1em;
+  width: 400px;
+  height: 600px;
+  margin-left: 10px;
+}
+
+.objectauth {
+  clear: both;
+  border-top: 1px dashed #999999;
+  margin-top:2em;
+  padding: 1em;
+  color: #555555;
+  font-size: smaller;
+  font-style:italic;
+}
+
+.obj_img img{
+  width: 250px;
+}
