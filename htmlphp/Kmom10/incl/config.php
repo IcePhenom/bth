@@ -15,3 +15,10 @@ include_once(dirname(__FILE__) . "/static.php");
 // account and password that can login
 $userAccount = "john";
 $userPassword = userPassword("doe");
+
+// Path to the SQLite database file
+$dbPath = dirname(__FILE__) . "/data/bmo.sqlite";
+
+// Connect to the database
+$db = new PDO("sqlite:$dbPath");
+$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING); // Display errors, but continue script
