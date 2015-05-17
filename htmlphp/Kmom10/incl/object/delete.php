@@ -9,34 +9,34 @@ $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING); // Display errors, b
 // Check if Save-button was pressed, save the ad if true.
 //
 if(isset($_POST['doDelete'])) {
-  $ad[] = $_POST["article"];
+  $ad[] = $_POST["object"];
 
-  $stmt = $db->prepare("DELETE FROM Article WHERE id=?");
+  $stmt = $db->prepare("DELETE FROM Object WHERE id=?");
   $stmt->execute($ad);
-  $output = "Raderade artikel. Rowcount is = " . $stmt->rowCount() . ".";
+  $output = "Raderade objekt. Rowcount is = " . $stmt->rowCount() . ".";
 }
 
 //
 // Create a select/option-list of the ads
 //
-$stmt = $db->prepare('SELECT * FROM Article WHERE category = "article"');
+$stmt = $db->prepare('SELECT * FROM Object');
 $stmt->execute();
 $res = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-$select = "<select id='input1' name='article'>";
-foreach($res as $article) {
-  $select .= "<option value='{$article['id']}'>{$article['title']} ({$article['id']})</option>";
+$select = "<select id='input1' name='object'>";
+foreach($res as $object) {
+  $select .= "<option value='{$object['id']}'>{$object['title']} ({$object['id']})</option>";
 }
 $select .= "</select>";
 ?>
 
-<h1>Ta bort en annons</h1>
-<p>Välj en annons och klicka knappen "Radera" för att ta bort artiklen.</p>
+<h1>Ta bort ett objekt</h1>
+<p>Välj ett objekt och klicka knappen "Radera" för att ta bort objektet.</p>
 
 <form method="post">
   <fieldset>
     <p>
-      <label for="input1">Befintliga artiklar:</label><br>
+      <label for="input1">Befintliga objekt:</label><br>
       <?php echo $select; ?>
     </p>
 

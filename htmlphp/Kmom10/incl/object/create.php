@@ -9,40 +9,39 @@ $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING); // Display errors, b
 // Check if Save-button was pressed, save the ad if true.
 //
 if(isset($_POST['doCreate'])) {
-  $article[] = strip_tags($_POST["title"], "<b><i><p><img>");
-  $article[] = 'article';
+  $object[] = strip_tags($_POST["title"], "<b><i><p><img>");
 
-  $stmt = $db->prepare("INSERT INTO Article (title,category) VALUES (?,?)");
-  $stmt->execute($article);
-  $output = "Lade till en ny artikel med id " . $db->lastInsertId() . ". Rowcount is = " . $stmt->rowCount() . ".";
+  $stmt = $db->prepare("INSERT INTO Object (title) VALUES (?)");
+  $stmt->execute($object);
+  $output = "Lade till en ntt objekt med id " . $db->lastInsertId() . ". Rowcount is = " . $stmt->rowCount() . ".";
 }
 
 //
 // Create a select/option-list of the ads
 //
-$stmt = $db->prepare('SELECT * FROM Article WHERE category = "article" ORDER BY pubdate DESC');
+$stmt = $db->prepare('SELECT * FROM Object');
 $stmt->execute();
 $res = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-$select = "<select id='input1' multiple name='article'>";
-foreach($res as $article) {
-  $select .= "<option value='{$article['id']}'>{$article['title']} ({$article['id']})</option>";
+$select = "<select id='input1' multiple name='object'>";
+foreach($res as $object) {
+  $select .= "<option value='{$object['id']}'>{$object['title']} ({$object['id']})</option>";
 }
 $select .= "</select>";
 ?>
 
-<h1>Lägg till artikel</h1>
-<p>Ange ett unikt namn på en artikel och klicka på knappen för att spara den.</p>
+<h1>Lägg till objekt</h1>
+<p>Ange ett unikt namn på ett objekt och klicka på knappen för att spara den.</p>
 
 <form method="post">
   <fieldset>
     <p>
-      <label for="input1">Befintliga artiklar:</label><br>
+      <label for="input1">Befintliga objekt:</label><br>
       <?php echo $select; ?>
     </p>
 
     <p>
-      <label for="input2">Titel på ny artikel:</label><br>
+      <label for="input2">Titel på nytt objekt:</label><br>
       <input id="input2" class="text" name="title">
     </p>
 
