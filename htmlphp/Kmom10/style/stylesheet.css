@@ -38,7 +38,7 @@ header#above{font-family:arial,helvetica,sans-serif;border-bottom:1px solid #E6E
 /* set width and center page */
 header,
 section#content,
-footer#bottom{margin:0 auto;width:1150px;}
+footer#bottom{margin:0 auto;width:1050px;}
 
 /* add common padding to main content block */
 section#content{padding:1em 0 1em 0;}
@@ -271,4 +271,10 @@ body#article a#article- {background:#858585;border:2px solid #656565;}
   border: 2px solid;
   margin-left: 5px;
   margin-bottom: 5px;
+}
+
+.paging {
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
 }
