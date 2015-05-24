@@ -68,6 +68,21 @@ function tools() {
  * --- main -----------------------------------------------
  */
 
+function f_front(&$title, &$file) {
+  if (isset($_GET["p"])) {
+    switch($_GET["p"]) {
+      case "init":
+        $title = "Initiera";
+        $file  = "init.php";
+        return;
+      case "update":
+        $title = "Updatera framsida";
+        $file  = "update.php";
+        return;
+    }
+  }
+}
+
 function f_article(&$title, &$file) {
   if (isset($_GET["p"])) {
     switch($_GET["p"]) {
