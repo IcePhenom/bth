@@ -16,7 +16,8 @@ $count = $db->query('SELECT COUNT(*) FROM Article WHERE category = "article"')->
       document.getElementById('head-all').style.display = "";
       document.getElementById('head').style.display = "none";
       for (i = 0; i < count; i++) {
-        document.getElementById(i).style.display = "";
+        document.getElementById(i+'-full').style.display = "none";
+        document.getElementById(i+'-teaser').style.display = "";
       }
     }
     else {
@@ -24,10 +25,12 @@ $count = $db->query('SELECT COUNT(*) FROM Article WHERE category = "article"')->
       document.getElementById('head').style.display = "";
       for (i = 0; i < count; i++) {
         if (i == sel.value) {
-          document.getElementById(i).style.display = "";
+          document.getElementById(i+'-full').style.display = "";
+          document.getElementById(i+'-teaser').style.display = "none";
         }
         else {
-          document.getElementById(i).style.display = "none";
+          document.getElementById(i+'-full').style.display = "none";
+          document.getElementById(i+'-teaser').style.display = "none";
         }
       }
     }
@@ -52,9 +55,24 @@ $count = $db->query('SELECT COUNT(*) FROM Article WHERE category = "article"')->
 <?php
 $i = 0;
 foreach($res as $article): ?>
-  <div class='article' id='<?php echo $i++; ?>'>
-    <strong><?php echo $article['title']; ?></strong><br>
+  <div class='article' id='<?php echo $i . '-teaser'; ?>'>
+    <h1><?php echo $article['title']; ?></h1>
+    <?php echo substr($article['content'], 0, 400) . '... <a href="?art=' . $i . '">Läs hela artiklen</a>'; ?>
+    <p class='articleauth'><?php echo $article['author']; ?></p>
+  </div>
+  <div class='article' style='display:none' id='<?php echo $i . '-full'; ?>'>
+    <h1><?php echo $article['title']; ?></h1>
     <?php echo $article['content']; ?>
     <p class='articleauth'><?php echo $article['author']; ?></p>
   </div>
+  <?php $i++; ?>
 <?php endforeach; ?>
+
+<?php $art = isset($_GET['art']) ? $_GET['art'] : 'all'; ?>
+
+<script type="text/javascript">
+  var page = {
+    value:"<?php echo $art; ?>"
+  };
+  window.onload = changeContent(page);
+</script>
