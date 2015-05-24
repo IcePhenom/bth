@@ -15,7 +15,7 @@ f_object($title, $file);
     <aside class="right" style="width:22%;">
       <?php include("$path/aside.php"); ?>
     </aside>
-  <article class="left border justify-para" style="width:72%;">
+    <article class="left border justify-para" style="width:72%;">
   <?php }
   else { ?>
     <article class="left justify-para">
