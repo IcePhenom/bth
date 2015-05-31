@@ -35,14 +35,17 @@ function logo() {
 }
 
 function menu() {
-  return "<nav class='navmenu'>
-    <a id='index-' href='index.php'>Hem</a>
-    <a id='article-' href='article.php'>Artiklar</a>
-    <a id='object-' href='object.php'>Objekt</a>
-    <a id='gallery-' href='gallery.php'>Galleri</a>
-    <a id='about-' href='about.php'>Om BMO</a>"
-    . userLoginMenu() .
-  "</nav>";
+  return
+  "<nav id='nav'>
+    <ul>
+      <li><a id='index-' href='index.php'>Hem</a></li>
+      <li><a id='article-' href='article.php'>Artiklar</a></li>
+      <li><a id='object-' href='object.php'>Objekt</a></li>
+      <li><a id='gallery-' href='gallery.php'>Galleri</a></li>
+      <li><a id='about-' href='about.php'>Om BMO</a></li>
+      <li>". userLoginMenu() . "</li>
+    </ul>
+  </nav>";
 }
 
 /**

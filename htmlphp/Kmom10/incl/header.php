@@ -1,25 +1,23 @@
-<!doctype html>
-<html lang="sv">
-<head>
-	<meta charset="utf-8">
-	<title><?=$title?></title>
-	<!-- links to external stylesheets -->
-	<?php echo stylesheet(); ?>
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title><?=$title?></title>
+		<link rel="shortcut icon" href="img/favicon.ico">
+		<link rel="stylesheet" href="style/main.css" />
+	</head>
+	<body <?php echo isset($pageId) ? " id='$pageId' " : ""; ?>>
+		<div id="page-wrapper">
 
-	<link rel="shortcut icon" href="img/favicon.ico">
+			<!-- Header -->
+			<header id="header">
+				<div class="logo container">
+					<div>
+						<h1><a href="index.php" id="logo">BMO</a></h1>
+						<p>Begravningsmuseum Online</p>
+					</div>
+				</div>
+			</header>
 
-	<!-- Each page can set $pageStyle to create an internal stylesheet -->
-	<?php echo pageStyle($pageStyle); ?>
-
-	<!--[if lt IE 9]>
-	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
-</head>
-<!-- The body id helps with highlighting current menu choice -->
-<body<?php echo isset($pageId) ? " id='$pageId' " : ""; ?>>
-	<!-- Header -->
-	<header>
-		<?php echo logo(); ?>
-
-		<?php echo menu(); ?>
-	</header>
+			<!-- Nav -->
+			<?php echo menu(); ?>

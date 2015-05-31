@@ -1,9 +1,13 @@
-<!--- Footer -->
-<div id="footer">
-<hr>
-<footer id="bottom">
-  <p><?php echo tools(); ?></p>
+<footer id="footer" class="container">
+  <!-- Tools -->
+  <section>
+    <p>Verktyg: <?php echo tools(); ?></p>
+  </section>
+  <!-- Copyright -->
+  <div id="copyright">
+    <ul class="menu">
+      <li>&copy; Begravningsmuseum Online</li>
+      <li>Design: Mads Nielsen</li>
+    </ul>
+  </div>
 </footer>
-</div>
-</body>
-</html>
