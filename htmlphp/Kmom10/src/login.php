@@ -34,30 +34,12 @@ function userIsAuthenticated() {
 // create the login/logout menu
 //
 function userLoginMenu() {
-  // array with all menu items
-  $menu = array(
-    "login"   => array(
-      "title" => "Logga in",
-      "link" => "login.php?p=login",
-    ),
-    "logout" => array(
-      "title" => "Logga ut",
-      "link"   => "login.php?p=logout",
-    ),
-  );
-
-  // check if user is logged in or not, alter the menu depending on the result
-  if(userIsAuthenticated()) {
-    unset($menu['login']);
-  } else {
-    unset($menu['logout']);
+  if (userisAuthenticated()) {
+    return "<a id='logout-' href='login.php?p=logout'>Logga ut</a>";
   }
-
-  $html = "";
-  foreach($menu as $key=>$val) {
-    $html .= "<a id='$key-' href='".$val['link']."'>".$val['title']."</a> ";
+  else {
+    return "<a id='login-' href='login.php?p=login'>Logga in</a>";
   }
-  return $html;
 }
 
 
