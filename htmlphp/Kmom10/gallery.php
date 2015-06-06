@@ -6,9 +6,21 @@ $pageStyle = '';
 ?>
 
 <?php include("incl/header.php"); ?>
-<section id="content">
-  <article class="left justify-para">
-    <?php include("incl/gallery/gallery_pres.php"); ?>
-  </article>
-</section>
-<?php include("incl/footer.php"); ?>
+<!-- Main -->
+  <div id="main-wrapper">
+    <div id="main" class="container">
+      <div class="row">
+        <div class="content">
+          <!-- Content -->
+          <article class="box page-content">
+            <?php include("incl/gallery/gallery_pres.php"); ?>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <?php include("incl/footer.php"); ?>
+</body>
+</html>

@@ -14,7 +14,7 @@ require("gallery_main.php");
         },
         overlay : {
           css : {
-            'background' : 'rgba(0,0,0,0.75)'
+            'background' : 'rgba(160,160,160,0.75)'
           }
         }
       }
@@ -24,7 +24,7 @@ require("gallery_main.php");
 <?php
 $p = (isset($_GET['p'])) ? $_GET['p'] : 0;
 
-$gallery = new gallery(dirname(dirname(dirname(__FILE__))) . "/img/bmo/550", 8);
+$gallery = new gallery(dirname(dirname(dirname(__FILE__))) . "/img/bmo/550", 10);
 $gallery->loadGallery();
 
 $pages = $gallery->paging();

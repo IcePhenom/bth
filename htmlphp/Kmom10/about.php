@@ -10,25 +10,40 @@ $pageStyle = '';
 $stmt = $db->prepare('SELECT * FROM Article WHERE category = "about"');
 $stmt->execute();
 $res = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$article = $res[0];
 ?>
 
 <?php include("incl/header.php"); ?>
-
-<!--- Main -->
-<section id="content">
-  <?php foreach($res as $article): ?>
-    <div class='about'>
-      <strong><?php echo $article['title']; ?></strong><br>
-      <figure class="about-images">
-        <img src="img/bmo/ronnyholm.jpg" width="400" height="250" alt="Bild på Ronny Holm">
-        <figcaption>
-          <p>Ronny Holm, organisationschef SKKF</p>
-        </figcaption>
-      </figure>
-      <?php echo $article['content']; ?>
+<!-- Main -->
+  <div id="main-wrapper">
+    <div id="main" class="container">
+      <div class="row">
+        <div class="content">
+          <!-- Content -->
+          <article class="box page-content">
+            <div class='about'>
+              <strong><?php echo $article['title']; ?></strong><br>
+              <figure class="about-images">
+                <img src="img/bmo/ronnyholm.jpg" width="400" height="250" alt="Bild på Ronny Holm">
+                <figcaption>
+                  <p>Ronny Holm, organisationschef SKKF</p>
+                </figcaption>
+              </figure>
+              <?php echo $article['content']; ?>
+            </div>
+          </article>
+        </div>
+      </div>
+      <!-- Byline -->
+      <div class="row">
+        <section>
+          <?php include("incl/byline.php"); ?>
+        </section>
+      </div>
     </div>
-  <?php endforeach; ?>
-  <?php include("incl/byline.php"); ?>
-</section>
+  </div>
 
-<?php include("incl/footer.php"); ?>
+  <!-- Footer -->
+  <?php include("incl/footer.php"); ?>
+</body>
+</html>

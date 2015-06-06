@@ -11,9 +11,21 @@ authenticate($title, $content);
 ?>
 
 <?php include("incl/header.php"); ?>
-<section id="content">
-  <div class="left border" style="width:80%;">
-    <?php print authPrint($content); ?>
+<!-- Main -->
+  <div id="main-wrapper">
+    <div id="main" class="container">
+      <div class="row">
+        <div class="content">
+          <!-- Content -->
+          <article class="box page-content">
+            <?php print authPrint($content); ?>
+          </article>
+        </div>
+      </div>
+    </div>
   </div>
-</section>
-<?php include("incl/footer.php"); ?>
+
+  <!-- Footer -->
+  <?php include("incl/footer.php"); ?>
+</body>
+</html>
