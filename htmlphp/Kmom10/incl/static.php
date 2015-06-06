@@ -1,7 +1,5 @@
 <?php
-/**
- * --- header ---------------------------------------------
- */
+/* Header */
 
 function stylesheet() {
   if (isset($_SESSION['stylesheet'])) {
@@ -48,9 +46,7 @@ function menu() {
   </nav>";
 }
 
-/**
- * --- footer ---------------------------------------------
- */
+/* Footer */
 
 function tools() {
   $url = getCurrentUrl();
@@ -62,20 +58,17 @@ function tools() {
   <a href='http://validator.w3.org/checklink?uri=" . $url . "'>Links</a>";
 }
 
-/**
- * --- main -----------------------------------------------
- */
+/* Main */
 
 function f_front(&$title, &$file) {
   if (isset($_GET["p"])) {
+    $file = f_file($_GET["p"]);
     switch($_GET["p"]) {
       case "init":
         $title = "Initiera";
-        $file  = "init.php";
         return;
       case "update":
         $title = "Updatera framsida";
-        $file  = "update.php";
         return;
     }
   }
@@ -83,26 +76,22 @@ function f_front(&$title, &$file) {
 
 function f_article(&$title, &$file) {
   if (isset($_GET["p"])) {
+    $file = f_file($_GET["p"]);
     switch($_GET["p"]) {
       case "init":
         $title = "Initiera annonserna";
-        $file  = "init.php";
         return;
       case "update":
         $title = "Visa och uppdatera annonser";
-        $file  = "update.php";
         return;
       case "create":
         $title = "Skapa ny annons";
-        $file  = "create.php";
         return;
       case "delete":
         $title = "Radera annons";
-        $file  = "delete.php";
         return;
       case "read-all":
         $title = "Visa alla annonser";
-        $file  = "default.php";
         return;
     }
   }
@@ -110,28 +99,39 @@ function f_article(&$title, &$file) {
 
 function f_object(&$title, &$file) {
   if (isset($_GET["p"])) {
+    $file = f_file($_GET["p"]);
     switch($_GET["p"]) {
       case "init":
         $title = "Initiera objekten";
-        $file  = "init.php";
         return;
       case "update":
         $title = "Visa och uppdatera objekt";
-        $file  = "update.php";
         return;
       case "create":
         $title = "Skapa nytt objekt";
-        $file  = "create.php";
         return;
       case "delete":
         $title = "Radera objekt";
-        $file  = "delete.php";
         return;
       case "read-all":
         $title = "Visa alla objekt";
-        $file  = "default.php";
         return;
     }
+  }
+}
+
+function f_file($case) {
+  switch($case) {
+    case "init":
+      return "init.php";
+    case "update":
+      return "update.php";
+    case "create":
+      return "create.php";
+    case "delete":
+      return "delete.php";
+    case "read-all":
+      return "default.php";
   }
 }
 

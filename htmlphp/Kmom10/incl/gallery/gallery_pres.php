@@ -1,6 +1,5 @@
 <?php
 require("gallery_main.php");
-
 ?>
 <script type="text/javascript" src="incl/gallery/js/jquery-1.10.1.min.js"></script>
 <script type="text/javascript" src="incl/gallery/js/jquery.fancybox.js?v=2.1.5"></script>

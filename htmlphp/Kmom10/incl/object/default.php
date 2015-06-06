@@ -1,7 +1,5 @@
 <?php
-//
 // Read from database
-//
 $stmt = $db->prepare('SELECT * FROM Object');
 $stmt->execute();
 $res = $stmt->fetchAll(PDO::FETCH_ASSOC);

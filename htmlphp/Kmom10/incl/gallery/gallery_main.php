@@ -1,5 +1,4 @@
 <?php
-
 class gallery {
   private $path;
   private $perPage;

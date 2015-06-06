@@ -1,7 +1,5 @@
 <?php
-//
 // Check if Save-button was pressed, save the ad if true.
-//
 if(isset($_POST['doDelete'])) {
   $ad[] = $_POST["article"];
 
@@ -10,9 +8,7 @@ if(isset($_POST['doDelete'])) {
   $output = "Raderade artikel. Rowcount is = " . $stmt->rowCount() . ".";
 }
 
-//
 // Create a select/option-list of the ads
-//
 $stmt = $db->prepare('SELECT * FROM Article WHERE category = "article"');
 $stmt->execute();
 $res = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -33,7 +29,6 @@ $select .= "</select>";
       <label for="input1">Befintliga artiklar:</label><br>
       <?php echo $select; ?>
     </p>
-
     <p>
       <input type="submit" name="doDelete" value="Radera">
     </p>

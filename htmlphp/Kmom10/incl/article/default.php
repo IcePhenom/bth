@@ -1,7 +1,5 @@
 <?php
-//
 // Read from database
-//
 $stmt = $db->prepare('SELECT * FROM Article WHERE category = "article" ORDER BY pubdate DESC');
 $stmt->execute();
 $res = $stmt->fetchAll(PDO::FETCH_ASSOC);

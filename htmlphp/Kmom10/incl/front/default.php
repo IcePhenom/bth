@@ -1,7 +1,5 @@
 <?php
-//
 // Read from database
-//
 $stmt = $db->prepare('SELECT * FROM Front');
 $stmt->execute();
 $front = $stmt->fetch(PDO::FETCH_ASSOC);

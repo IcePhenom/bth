@@ -1,7 +1,5 @@
 <?php
-//
 // Check if Save-button was pressed, save the ad if true.
-//
 if(isset($_POST['doCreate'])) {
   $object[] = strip_tags($_POST["title"], "<b><i><p><img>");
 
@@ -10,9 +8,7 @@ if(isset($_POST['doCreate'])) {
   $output = "Lade till en ntt objekt med id " . $db->lastInsertId() . ". Rowcount is = " . $stmt->rowCount() . ".";
 }
 
-//
 // Create a select/option-list of the ads
-//
 $stmt = $db->prepare('SELECT * FROM Object');
 $stmt->execute();
 $res = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -33,17 +29,14 @@ $select .= "</select>";
       <label for="input1">Befintliga objekt:</label><br>
       <?php echo $select; ?>
     </p>
-
     <p>
       <label for="input2">Titel på nytt objekt:</label><br>
       <input id="input2" class="text" name="title">
     </p>
-
     <p>
       <input type="submit" name="doCreate" value="Skapa">
       <input type="reset" value="Ångra">
     </p>
-
     <?php if(isset($output)): ?>
     <p><output class="info"><?php echo $output ?></output></p>
     <?php endif; ?>

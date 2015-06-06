@@ -1,7 +1,5 @@
 <?php
-//
 // Check if Save-button was pressed, save the ad if true.
-//
 if(isset($_POST['doDelete'])) {
   $ad[] = $_POST["object"];
 
@@ -10,9 +8,7 @@ if(isset($_POST['doDelete'])) {
   $output = "Raderade objekt. Rowcount is = " . $stmt->rowCount() . ".";
 }
 
-//
 // Create a select/option-list of the ads
-//
 $stmt = $db->prepare('SELECT * FROM Object');
 $stmt->execute();
 $res = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -33,11 +29,9 @@ $select .= "</select>";
       <label for="input1">Befintliga objekt:</label><br>
       <?php echo $select; ?>
     </p>
-
     <p>
       <input type="submit" name="doDelete" value="Radera">
     </p>
-
     <?php if(isset($output)): ?>
     <p><output class="info"><?php echo $output ?></output></p>
     <?php endif; ?>

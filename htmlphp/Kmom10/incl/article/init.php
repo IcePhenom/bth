@@ -14,9 +14,7 @@
 if(isset($_GET['create-database'])) {
   include(dirname(dirname(__FILE__)) . "/data/init_database.php");
 }
-?>
 
-<?php
 // Testing the connection with the database
 // The $dbPath is defined in blokket2.php
 if(is_file($dbPath)) {
@@ -27,14 +25,12 @@ if(is_file($dbPath)) {
 }
 ?>
 
-
 <?php if(is_writable($dbPath)): ?>
   <p class="success">Databasfilen är skrivbar.</p>
 <?php else: ?>
   <p class="alert">Databasfilen är ej skrivbar. Gör chmod 666 för att göra filen skrivbar.</p>
   <?php return; ?>
 <?php endif; ?>
-
 
 <p><a href="?p=init&amp;create-database">Klicka på denna länk för att återställa artikeldatabasen till sitt ursprungliga skick. Befintliga artikel
 raderas och en uppsättning default-artikel skapas</a>.</p>
