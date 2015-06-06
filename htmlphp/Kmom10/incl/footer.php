@@ -1,8 +1,8 @@
 <footer id="footer" class="container">
   <!-- Tools -->
-  <section>
-    <p>Verktyg: <?php echo tools(); ?></p>
-  </section>
+  <div>
+    Verktyg: <?php echo tools(); ?>
+  </div>
   <!-- Copyright -->
   <div id="copyright">
     <ul class="menu">

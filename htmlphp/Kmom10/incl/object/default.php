@@ -97,7 +97,7 @@ foreach($res as $object): ?>
   <div class='object' id='<?php echo $i++; ?>'>
     <strong><?php echo $object['title']; ?></strong><br>
     <div id='cat-<?php echo $j++; ?>' class='<?php echo $object['category']; ?>'>Kategori: <?php echo $object['category']; ?></div>
-    <div class='obj_img'><img src='<?php echo $object['image']; ?>'></div>
+    <div class='obj_img'><img src='<?php echo $object['image']; ?>' alt='<?php echo $object['title']; ?>'></div>
     <?php echo $object['text']; ?>
     <p class='objectauth'><?php echo $object['owner']; ?></p>
   </div>

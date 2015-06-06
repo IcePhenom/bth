@@ -22,7 +22,7 @@ $article = $res[0];
           <!-- Content -->
           <article class="box page-content">
             <div class='about'>
-              <strong><?php echo $article['title']; ?></strong><br>
+              <h2><?php echo $article['title']; ?></h2>
               <figure class="about-images">
                 <img src="img/bmo/ronnyholm.jpg" width="400" height="250" alt="Bild på Ronny Holm">
                 <figcaption>

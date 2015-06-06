@@ -1,9 +1,9 @@
 <?php
 require("gallery_main.php");
 ?>
+<h2>Galleri</h2>
 <script type="text/javascript" src="incl/gallery/js/jquery-1.10.1.min.js"></script>
 <script type="text/javascript" src="incl/gallery/js/jquery.fancybox.js?v=2.1.5"></script>
-<link rel="stylesheet" type="text/css" href="incl/gallery/js/jquery.fancybox.css?v=2.1.5" media="screen" />
 <script type="text/javascript">
   $(document).ready(function() {
     $(".fancybox").fancybox({
