@@ -87,9 +87,9 @@ $cat = $stmt2->fetchAll(PDO::FETCH_ASSOC);
   </select>
 </div>
 
-<div id='head-all'><h1>Alla objekt</h1></div>
-<div id='head-cat' style='display:none'><h1>Objekt kategori</h1></div>
-<div id='head' style='display:none'><h1>Objekt</h1></div>
+<div id='head-all'><h2>Alla objekt</h2></div>
+<div id='head-cat' style='display:none'><h2>Objekt kategori</h2></div>
+<div id='head' style='display:none'><h2>Objekt</h2></div>
 <?php
 $i = 0;
 $j = 0;

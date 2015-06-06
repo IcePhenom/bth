@@ -48,18 +48,18 @@ $count = $db->query('SELECT COUNT(*) FROM Article WHERE category = "article"')->
   </select>
 </div>
 
-<div id='head-all'><h1>Alla artiklar</h1></div>
-<div id='head' style='display:none'><h1>Artikel</h1></div>
+<div id='head-all'><h2>Alla artiklar</h2></div>
+<div id='head' style='display:none'><h2>Artikel</h2></div>
 <?php
 $i = 0;
 foreach($res as $article): ?>
   <div class='article' id='<?php echo $i . '-teaser'; ?>'>
-    <h1><?php echo $article['title']; ?></h1>
+    <h2><?php echo $article['title']; ?></h2>
     <?php echo substr($article['content'], 0, 400) . '... <a href="?art=' . $i . '">Läs hela artiklen</a>'; ?>
     <p class='articleauth'><?php echo $article['author']; ?></p>
   </div>
   <div class='article' style='display:none' id='<?php echo $i . '-full'; ?>'>
-    <h1><?php echo $article['title']; ?></h1>
+    <h2><?php echo $article['title']; ?></h2>
     <?php echo $article['content']; ?>
     <p class='articleauth'><?php echo $article['author']; ?></p>
   </div>
