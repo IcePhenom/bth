@@ -41,7 +41,7 @@ function userLoginForm($output=null, $outputClass=null) {
               $output
               <p>
                 <label for='input1'>Användarkonto:</label><br>
-                <input id='input1' class='text' type'text' name='account'>
+                <input id='input1' class='text' type='text' name='account'>
               </p>
               <p>
                 <label for='input2'>Lösenord:</label><br>
