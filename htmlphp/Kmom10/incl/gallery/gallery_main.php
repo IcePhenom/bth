@@ -19,8 +19,15 @@ class gallery {
     }
   }
 
-  function paging() {
-    return count($this->images)/$this->perPage;
+  function paging($currentPage) {
+    $pages = count($this->images)/$this->perPage;
+
+    $ret = "";
+
+    for ($i=0; $i < $pages; $i++) {
+      $ret .= ($currentPage == $i) ? "Sida ".($i+1)." " : "<a href='gallery.php?p=$i&n=" . $this->perPage . "'>Sida ".($i+1)."</a> ";
+    }
+    return $ret;
   }
 
   function listImages($page) {
