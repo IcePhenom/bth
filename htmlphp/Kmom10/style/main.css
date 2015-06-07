@@ -512,7 +512,7 @@ nav.vmenu ul ul li a {
 /* Article */
 
 .article {
-  background: #EEEEEE;
+  background: #F6F6F6;
   padding: 1em;
   margin-bottom: 1em;
 }
@@ -535,7 +535,7 @@ nav.vmenu ul ul li a {
 
 .object {
   float: left;
-  background: #EEEEEE;
+  background: #F6F6F6;
   padding: 1em;
   margin-bottom: 1em;
   width: 350px;
@@ -590,7 +590,7 @@ nav.vmenu ul ul li a {
 }
 
 	#pictures li {
-	  background: #EDFFEB;
+	  background: #F6F6F6;
 	  float: left;
 	  width: 215px;
 	  height: 250px;
