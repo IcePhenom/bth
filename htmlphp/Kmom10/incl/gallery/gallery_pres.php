@@ -22,16 +22,24 @@ require("gallery_main.php");
 </script>
 <?php
 $p = (isset($_GET['p'])) ? $_GET['p'] : 0;
+$n = (isset($_GET['n'])) ? $_GET['n'] : 10;
 
-$gallery = new gallery(dirname(dirname(dirname(__FILE__))) . "/img/bmo/550", 10);
+$gallery = new gallery(dirname(dirname(dirname(__FILE__))) . "/img/bmo/550", $n);
 $gallery->loadGallery();
 
 $pages = $gallery->paging();
 $images = $gallery->listImages($p);
 
+echo '<div class="perPage">Bilder per sida ';
+for ($i=5; $i <= 15; $i+=5) {
+
+  echo "<a href='gallery.php?p=0&n=$i'>$i</a> ";
+}
+echo '</div>';
+
 echo '<div class="paging">';
 for ($i=0; $i < $pages; $i++) {
-  echo ($p == $i) ? "Sida ".($i+1)." " : "<a href='gallery.php?p=$i'>Sida ".($i+1)."</a> ";
+  echo ($p == $i) ? "Sida ".($i+1)." " : "<a href='gallery.php?p=$i&n=$n'>Sida ".($i+1)."</a> ";
 }
 echo '</div>';
 

@@ -538,23 +538,23 @@ nav.vmenu ul ul li a {
   background: #EEEEEE;
   padding: 1em;
   margin-bottom: 1em;
-  width: 400px;
-  height: 600px;
+  width: 350px;
+  height: 550px;
   margin-left: 10px;
 }
 
 .objectauth {
   clear: both;
   border-top: 1px dashed #999999;
-  margin-top:2em;
-  padding: 1em;
+  margin-top:1em;
   color: #555555;
   font-size: smaller;
   font-style:italic;
 }
 
 .obj_img img{
-  width: 250px;
+  max-width: 250px;
+  max-height: 250px;
 }
 
 /* About */
@@ -607,7 +607,7 @@ nav.vmenu ul ul li a {
 		}
 
 .paging {
-  width: 200px;
+  width: 600px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -615,3 +615,12 @@ nav.vmenu ul ul li a {
 	.paging a {
 		color: inherit;
 	}
+
+.perPage {
+  float: right;
+  margin-right: 100px;
+}
+
+  .perPage a {
+    color: inherit;
+  }
